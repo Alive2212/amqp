@@ -45,11 +45,11 @@ class AmqpManager
         $this->app['config']['amqp.default'] = $name;
     }
 
-    protected function getConnection ($name) {
+    public function getConnection ($name) {
         return $this->connections[$name] ?? ($this->connections[$name] = $this->resolve($name));
     }
 
-    protected function resolveConnectionName ($name) {
+    public function resolveConnectionName ($name) {
         return $name ?: $this->getDefaultConnection();
     }
 
