@@ -1,12 +1,12 @@
 {
     "name": "alive2212/laravel-amqp",
-    "description": "php-amqplib wrapper that eases the consumption of RabbitMQ. A painless way of using RabbitMQ",
+    "description": "This is Fork of anik/amqp package \n of php-amqplib wrapper that eases the consumption of RabbitMQ. A painless way of using RabbitMQ",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Syed Sirajul Islam Anik",
-            "email": "sirajul.islam.anik@gmail.com"
+            "name": "Babak Nodoust",
+            "email": "alive2212@gmail.com"
         }
     ],
     "minimum-stability": "stable",
