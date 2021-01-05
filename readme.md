@@ -1,3 +1,6 @@
+This is fork of anik/amqp for our usage.
+in this package we change 'resolveConnectionName' and 'getConnection' method to a public method, to customize our channel and queue and exchange.
+Many Many Thanks `anik/amqp`
 anik/amqp
 ---
 `anik/amqp` is a php-amqplib wrapper that eases the consumption of RabbitMQ. A painless way of using RabbitMQ. 
