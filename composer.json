@@ -30,7 +30,7 @@
                 "Alive2212\\LaravelAmqp\\ServiceProviders\\AmqpServiceProvider"
             ],
             "aliases": {
-                "Amqp": "Alive2212\\LaravelAmqp\\Facades\\Amqp"
+                "LaravelAmqp": "Alive2212\\LaravelAmqp\\Facades\\Amqp"
             }
         }
     }
