@@ -21,7 +21,7 @@
     "require-dev": {},
     "autoload": {
         "psr-4": {
-            "Anik\\Amqp\\": "src/"
+            "Alive2212\\LaravelAmqp\\": "src/"
         }
     },
     "extra": {
