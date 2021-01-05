@@ -1,10 +1,10 @@
 <?php
 
-namespace Anik\Amqp\ServiceProviders;
+namespace Alive2212\LaravelAmqp\ServiceProviders;
 
-use Anik\Amqp\AmqpManager;
-use Anik\Amqp\Consumer;
-use Anik\Amqp\Publisher;
+use Alive2212\LaravelAmqp\AmqpManager;
+use Alive2212\LaravelAmqp\Consumer;
+use Alive2212\LaravelAmqp\Publisher;
 use Illuminate\Support\ServiceProvider;
 
 class AmqpServiceProvider extends ServiceProvider

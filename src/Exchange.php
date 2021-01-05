@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
 class Exchange
 {
@@ -21,7 +21,7 @@ class Exchange
     /**
      * @param string $name
      *
-     * @return \Anik\Amqp\Exchange
+     * @return \Alive2212\LaravelAmqp\Exchange
      */
     public function setName (string $name) : self {
         $this->name = $name;
@@ -39,7 +39,7 @@ class Exchange
     /**
      * @param array $properties
      *
-     * @return \Anik\Amqp\Exchange
+     * @return \Alive2212\LaravelAmqp\Exchange
      */
     public function setProperties (array $properties) : self {
         $this->properties = $properties;

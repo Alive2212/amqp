@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
 class AmqpConsumer
 {
@@ -20,7 +20,7 @@ class AmqpConsumer
     /**
      * @param array $properties
      *
-     * @return \Anik\Amqp\AmqpConsumer
+     * @return \Alive2212\LaravelAmqp\AmqpConsumer
      */
     public function setProperties (array $properties) : self {
         $this->properties = $properties;

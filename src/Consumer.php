@@ -1,8 +1,8 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
-use Anik\Amqp\Exceptions\AmqpException;
+use Alive2212\LaravelAmqp\Exceptions\AmqpException;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
@@ -34,10 +34,10 @@ class Consumer
     }
 
     /**
-     * @param \Anik\Amqp\ConsumableMessage $handler
+     * @param \Alive2212\LaravelAmqp\ConsumableMessage $handler
      * @param                              $bindingKey
      *
-     * @throws \Anik\Amqp\Exceptions\AmqpException
+     * @throws \Alive2212\LaravelAmqp\Exceptions\AmqpException
      * @throws \ErrorException
      */
     public function consume (ConsumableMessage $handler, $bindingKey) {

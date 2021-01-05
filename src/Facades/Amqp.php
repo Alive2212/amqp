@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp\Facades;
+namespace Alive2212\LaravelAmqp\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

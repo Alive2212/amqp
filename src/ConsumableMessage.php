@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
 use PhpAmqpLib\Message\AMQPMessage;
 
@@ -16,7 +16,7 @@ abstract class ConsumableMessage
     /**
      * @param array $properties
      *
-     * @return \Anik\Amqp\ConsumableMessage
+     * @return \Alive2212\LaravelAmqp\ConsumableMessage
      */
     public function setProperties (array $properties) : self {
         $this->properties = $properties;
@@ -41,7 +41,7 @@ abstract class ConsumableMessage
     /**
      * @param string $stream
      *
-     * @return \Anik\Amqp\ConsumableMessage
+     * @return \Alive2212\LaravelAmqp\ConsumableMessage
      */
     public function setStream (string $stream) : self {
         $this->stream = $stream;
@@ -50,14 +50,14 @@ abstract class ConsumableMessage
     }
 
     /**
-     * @return null|\Anik\Amqp\Exchange
+     * @return null|\Alive2212\LaravelAmqp\Exchange
      */
     public function getExchange () : ?Exchange {
         return $this->exchange;
     }
 
     /**
-     * @param \Anik\Amqp\Exchange $exchange
+     * @param \Alive2212\LaravelAmqp\Exchange $exchange
      *
      * @return self
      */
@@ -68,14 +68,14 @@ abstract class ConsumableMessage
     }
 
     /**
-     * @return null|\Anik\Amqp\Queue
+     * @return null|\Alive2212\LaravelAmqp\Queue
      */
     public function getQueue () : ?Queue {
         return $this->queue;
     }
 
     /**
-     * @param \Anik\Amqp\Queue $queue
+     * @param \Alive2212\LaravelAmqp\Queue $queue
      *
      * @return self
      */
@@ -86,16 +86,16 @@ abstract class ConsumableMessage
     }
 
     /**
-     * @return \Anik\Amqp\AmqpConsumer|null
+     * @return \Alive2212\LaravelAmqp\AmqpConsumer|null
      */
     public function getConsumer () : ?AmqpConsumer {
         return $this->consumer;
     }
 
     /**
-     * @param \Anik\Amqp\AmqpConsumer $consumer
+     * @param \Alive2212\LaravelAmqp\AmqpConsumer $consumer
      *
-     * @return \Anik\Amqp\ConsumableMessage
+     * @return \Alive2212\LaravelAmqp\ConsumableMessage
      */
     public function setConsumer (AmqpConsumer $consumer) : self {
         $this->consumer = $consumer;
@@ -104,16 +104,16 @@ abstract class ConsumableMessage
     }
 
     /**
-     * @return \Anik\Amqp\Delivery|null
+     * @return \Alive2212\LaravelAmqp\Delivery|null
      */
     public function getDeliveryInfo () : ?Delivery {
         return $this->deliveryInfo;
     }
 
     /**
-     * @param \Anik\Amqp\Delivery $deliveryInfo
+     * @param \Alive2212\LaravelAmqp\Delivery $deliveryInfo
      *
-     * @return \Anik\Amqp\ConsumableMessage
+     * @return \Alive2212\LaravelAmqp\ConsumableMessage
      */
     public function setDeliveryInfo ($deliveryInfo) : self {
         $this->deliveryInfo = $deliveryInfo;
@@ -133,7 +133,7 @@ abstract class ConsumableMessage
     /**
      * @param \PhpAmqpLib\Message\AMQPMessage $amqpMessage
      *
-     * @return \Anik\Amqp\ConsumableMessage
+     * @return \Alive2212\LaravelAmqp\ConsumableMessage
      */
     public function setAmqpMessage (AMQPMessage $amqpMessage) : ConsumableMessage {
         $this->amqpMessage = $amqpMessage;

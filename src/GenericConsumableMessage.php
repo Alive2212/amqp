@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
 use Closure;
 

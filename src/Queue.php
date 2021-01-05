@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
 class Queue
 {
@@ -21,7 +21,7 @@ class Queue
     /**
      * @param string $name
      *
-     * @return \Anik\Amqp\Queue
+     * @return \Alive2212\LaravelAmqp\Queue
      */
     public function setName (string $name) : self {
         $this->name = $name;
@@ -39,7 +39,7 @@ class Queue
     /**
      * @param array $properties
      *
-     * @return \Anik\Amqp\Queue
+     * @return \Alive2212\LaravelAmqp\Queue
      */
     public function setProperties (array $properties) : self {
         $this->properties = $properties;

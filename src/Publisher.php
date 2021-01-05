@@ -1,8 +1,8 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
-use Anik\Amqp\Exceptions\AmqpException;
+use Alive2212\LaravelAmqp\Exceptions\AmqpException;
 use PhpAmqpLib\Channel\AMQPChannel;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Wire\AMQPTable;
@@ -31,20 +31,20 @@ class Publisher
     }
 
     /**
-     * @param \Anik\Amqp\PublishableMessage $message
+     * @param \Alive2212\LaravelAmqp\PublishableMessage $message
      * @param                               $routingKey
      *
-     * @throws \Anik\Amqp\Exceptions\AmqpException
+     * @throws \Alive2212\LaravelAmqp\Exceptions\AmqpException
      */
     public function publish (PublishableMessage $message, $routingKey) {
         $this->publishBulk([ $message ], $routingKey);
     }
 
     /**
-     * @param \Anik\Amqp\PublishableMessage[] $messages
+     * @param \Alive2212\LaravelAmqp\PublishableMessage[] $messages
      * @param                                 $routingKey
      *
-     * @throws \Anik\Amqp\Exceptions\AmqpException
+     * @throws \Alive2212\LaravelAmqp\Exceptions\AmqpException
      */
     public function publishBulk ($messages, $routingKey) {
         if (!$this->channel instanceof AMQPChannel) {

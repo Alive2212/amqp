@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
 use PhpAmqpLib\Message\AMQPMessage;
 
@@ -16,7 +16,7 @@ class PublishableMessage
     /**
      * @param array $properties
      *
-     * @return \Anik\Amqp\PublishableMessage
+     * @return \Alive2212\LaravelAmqp\PublishableMessage
      */
     public function setProperties (array $properties) : self {
         $this->properties = $properties;
@@ -46,14 +46,14 @@ class PublishableMessage
     }
 
     /**
-     * @return null|\Anik\Amqp\Exchange
+     * @return null|\Alive2212\LaravelAmqp\Exchange
      */
     public function getExchange () : ?Exchange {
         return $this->exchange;
     }
 
     /**
-     * @param \Anik\Amqp\Exchange $exchange
+     * @param \Alive2212\LaravelAmqp\Exchange $exchange
      *
      * @return self
      */

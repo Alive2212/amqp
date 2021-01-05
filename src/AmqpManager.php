@@ -1,8 +1,8 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
-use Anik\Amqp\Exceptions\AmqpException;
+use Alive2212\LaravelAmqp\Exceptions\AmqpException;
 use Illuminate\Container\Container;
 use InvalidArgumentException;
 use PhpAmqpLib\Connection\AbstractConnection;
@@ -80,13 +80,13 @@ class AmqpManager
     }
 
     /**
-     * @param string|\Anik\Amqp\PublishableMessage $message
+     * @param string|\Alive2212\LaravelAmqp\PublishableMessage $message
      * @param array                                $default
      * @param array                                $dynamic
      *
-     * @return \Anik\Amqp\PublishableMessage
+     * @return \Alive2212\LaravelAmqp\PublishableMessage
      *
-     * @throws \Anik\Amqp\Exceptions\AmqpException
+     * @throws \Alive2212\LaravelAmqp\Exceptions\AmqpException
      */
     protected function constructMessage ($message, array $default = [], array $dynamic = []) : PublishableMessage {
         $publishable = $message;
@@ -96,7 +96,7 @@ class AmqpManager
         } elseif ($message instanceof PublishableMessage) {
             $properties = array_merge($default, $message->getProperties(), $dynamic);
         } else {
-            throw new AmqpException('Message can be typeof string or Anik\Amqp\PublishableMessage.');
+            throw new AmqpException('Message can be typeof string or Alive2212\LaravelAmqp\PublishableMessage.');
         }
 
         if (count($properties)) {
@@ -109,8 +109,8 @@ class AmqpManager
     /**
      * @param $closure
      *
-     * @return \Anik\Amqp\ConsumableMessage
-     * @throws \Anik\Amqp\Exceptions\AmqpException
+     * @return \Alive2212\LaravelAmqp\ConsumableMessage
+     * @throws \Alive2212\LaravelAmqp\Exceptions\AmqpException
      */
     protected function constructReceivableMessage ($closure) : ConsumableMessage {
         if (is_callable($closure)) {
@@ -118,7 +118,7 @@ class AmqpManager
         } elseif ($closure instanceof ConsumableMessage) {
             return $closure;
         } else {
-            throw new AmqpException('Handler can be typeof Closure or Anik\Amqp\ConsumableMessage');
+            throw new AmqpException('Handler can be typeof Closure or Alive2212\LaravelAmqp\ConsumableMessage');
         }
     }
 
@@ -163,7 +163,7 @@ class AmqpManager
             $passableMessages[] = $pMsg;
         }
 
-        /* @var \Anik\Amqp\Publisher $publisher */
+        /* @var \Alive2212\LaravelAmqp\Publisher $publisher */
         $publisher = app(Publisher::class);
         $publisher->setChannel($channel)->publishBulk($passableMessages, $routingKey);
     }
@@ -222,7 +222,7 @@ class AmqpManager
             $channel->basic_qos($mergedQosConfig['qos_prefetch_size'], $mergedQosConfig['qos_prefetch_count'], $mergedQosConfig['qos_a_global']);
         }
 
-        /* @var \Anik\Amqp\Consumer $consumer */
+        /* @var \Alive2212\LaravelAmqp\Consumer $consumer */
         $consumer = app(Consumer::class);
         $consumer->setChannel($channel)->consume($handler, $bindingKey);
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Anik\Amqp\Exceptions;
+namespace Alive2212\LaravelAmqp\Exceptions;
 
 use Exception;
 

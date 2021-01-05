@@ -1,8 +1,8 @@
 <?php
 
-namespace Anik\Amqp;
+namespace Alive2212\LaravelAmqp;
 
-use Anik\Amqp\Exceptions\AmqpException;
+use Alive2212\LaravelAmqp\Exceptions\AmqpException;
 
 class Delivery
 {
@@ -22,7 +22,7 @@ class Delivery
     /**
      * @param array $properties
      *
-     * @return \Anik\Amqp\Delivery
+     * @return \Alive2212\LaravelAmqp\Delivery
      */
     public function setProperties (array $properties) : self {
         $this->properties = $properties;
@@ -52,7 +52,7 @@ class Delivery
      *
      * @param bool $requeue
      *
-     * @throws \Anik\Amqp\Exceptions\AmqpException
+     * @throws \Alive2212\LaravelAmqp\Exceptions\AmqpException
      */
     public function reject ($requeue = false) {
         $props = $this->getProperties();
