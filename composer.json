@@ -1,5 +1,5 @@
 {
-    "name": "anik/amqp",
+    "name": "alive2212/laravel_amqp",
     "description": "php-amqplib wrapper that eases the consumption of RabbitMQ. A painless way of using RabbitMQ",
     "type": "library",
     "license": "MIT",
@@ -27,10 +27,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Anik\\Amqp\\ServiceProviders\\AmqpServiceProvider"
+                "Alive2212\\Laravel_Amqp\\ServiceProviders\\AmqpServiceProvider"
             ],
             "aliases": {
-                "Amqp": "Anik\\Amqp\\Facades\\Amqp"
+                "Amqp": "Alive2212\\Laravel_Amqp\\Facades\\Amqp"
             }
         }
     }
