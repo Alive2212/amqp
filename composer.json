@@ -27,10 +27,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Alive2212\\Laravel_Amqp\\ServiceProviders\\AmqpServiceProvider"
+                "Alive2212\\LaravelAmqp\\ServiceProviders\\AmqpServiceProvider"
             ],
             "aliases": {
-                "Amqp": "Alive2212\\Laravel_Amqp\\Facades\\Amqp"
+                "Amqp": "Alive2212\\LaravelAmqp\\Facades\\Amqp"
             }
         }
     }
