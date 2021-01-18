@@ -226,4 +226,20 @@ class AmqpManager
         $consumer = app(Consumer::class);
         $consumer->setChannel($channel)->consume($handler, $bindingKey);
     }
+
+    /**
+     * @return \Illuminate\Contracts\Container\Container
+     */
+    public function getApp()
+    {
+        return $this->app;
+    }
+
+    /**
+     * @param \Illuminate\Contracts\Container\Container $app
+     */
+    public function setApp($app): void
+    {
+        $this->app = $app;
+    }
 }
